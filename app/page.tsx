@@ -52,7 +52,7 @@ export default function Home() {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/book/choloichka-classic">
+              <Link href="/book/quick">
                 <CalendarDays className="h-4 w-4" />
                 Записатись онлайн
                 <ArrowRight className="h-4 w-4" />
