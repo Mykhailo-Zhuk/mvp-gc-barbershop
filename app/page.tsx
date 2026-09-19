@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, ArrowRight, Sparkles, CalendarDays } from "lucide-react";
+import { Phone, MapPin, Clock, ArrowRight, Sparkles, CalendarDays, Wallet, CalendarPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 
@@ -46,16 +46,16 @@ export default function Home() {
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
-              <a href="tel:+38(068)9170491">
-                <Phone className="h-4 w-4" />
-                +38 (068) 917-04-91
+              <a href="tel:+38(068)9170491" className="inline-flex items-center gap-2">
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                <span>+38 (068) 917-04-91</span>
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/book/quick">
-                <CalendarDays className="h-4 w-4" />
-                Записатись онлайн
-                <ArrowRight className="h-4 w-4" />
+              <Link href="/book/quick" className="inline-flex items-center gap-2">
+                <CalendarDays className="h-5 w-5 flex-shrink-0" />
+                <span>Записатись онлайн</span>
+                <ArrowRight className="h-5 w-5 flex-shrink-0" />
               </Link>
             </Button>
           </div>
@@ -71,9 +71,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Чоловіча стрижка (класика)</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Консультація, миття, класична стрижка з укладкою.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">450 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                450 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/choloichka-modern" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -81,9 +87,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Чоловіча стрижка (модерн)</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Сучасна стрижка з фейдом та текстуруванням.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">600 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                600 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/boroda-korolivska" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -91,9 +103,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Оформлення борід (Royal)</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Професійне оформлення з гарячим рушником.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">400 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                400 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/golinnia-royalshave" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -101,9 +119,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Гоління небезпечною бритвою</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Royal Shave experience з гарячим компресом.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">600 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                600 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/kombo-classic" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -111,9 +135,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Combo: стрижка + борода</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Найпопулярніша послуга мережі.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">750 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                750 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/stylng-cholovicha" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -121,9 +151,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Укладка чоловіча</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Укладка для особливих подій та побачення.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">250 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                250 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/dityacha-stryzhka" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -131,9 +167,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Дитяча стрижка</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Терпляча стрижка для хлопчиків до 12 років.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">350 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                350 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/doglяd-borody" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -141,9 +183,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Догляд за бородою</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Глибоке очищення, кондиціонування, олія преміум.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">350 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                350 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/karbon-blackmask" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -151,9 +199,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Карбонова маска</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Детокс, звуження пор, anti-age ефект.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">500 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                500 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
         </div>
